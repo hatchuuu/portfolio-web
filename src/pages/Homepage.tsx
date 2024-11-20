@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { ArrowRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
