@@ -9,6 +9,8 @@ import {
 import { useState } from "react";
 import { Input } from "./ui/input";
 import { Camera, Mail, PhoneCall, Send } from "lucide-react";
+import { Textarea } from "./ui/textarea";
+import ButtonAlert from "./ButtonAlert";
 
 const CardContact = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -51,7 +53,7 @@ const CardContact = () => {
   };
 
   return (
-    <Card>
+    <Card className="sm:min-w-[40vw]">
       <CardHeader>
         <CardTitle>Sosial Media</CardTitle>
         <CardDescription>Hubungi saya di kontak di bawah ini</CardDescription>
@@ -62,11 +64,12 @@ const CardContact = () => {
             open ? "flex flex-col justify-end items-end mb-3 gap-2" : "hidden"
           }
         >
-          <Input
+          <Textarea
             placeholder="kirimi saya pesan"
             onChange={(e) => {
               setText(e.target.value);
             }}
+            className="sm:h-20"
           />
           <Button
             variant="default"
@@ -76,17 +79,8 @@ const CardContact = () => {
             Kirim <Send size={12} />
           </Button>
         </div>
-        <div className="flex flex-col gap-3 text-base">
-          <Button variant="neutral">
-            <Camera size={12} />
-            <a
-              href="https://www.instagram.com/yankuniku"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-          </Button>
+        <div className="flex sm:flex-row flex-col gap-3 text-base">
+          <ButtonAlert />
           <Button
             variant="neutral"
             onClick={handleWa}

@@ -5,7 +5,7 @@ const Footer = () => {
         <p>RYAN KUSUMA WEB PORTFOLIO</p>
         <p className="font-light">Copyright 2024</p>
       </div>
-      <div>
+      <div className="flex flex-col items-start sm:items-end">
         <h1>Hubungi saya</h1>
         <li className="ms-3">kusuma.nayr@gmail.com</li>
         <li className="ms-3">(+62) 895-3209-87471</li>

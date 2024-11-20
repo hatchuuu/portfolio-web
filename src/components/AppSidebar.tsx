@@ -9,6 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
 
@@ -50,12 +51,15 @@ export const AppSidebar = () => {
               {items.map((item) => (
                 <SidebarMenuItem
                   key={item.title}
-                  className="flex items-center justify-center group"
+                  className="flex items-center justify-center "
                 >
                   <SidebarMenuButton asChild>
-                    <Link to={item.url} className="h-[40px] text-lg font-bold">
-                      <item.icon className="text-black group-hover:text-white" />
-                      <span className="text-black group-hover:text-white">
+                    <Link
+                      to={item.url}
+                      className="h-[40px] text-lg  font-bold group/edit"
+                    >
+                      <item.icon className="text-black group-hover/edit:text-white" />
+                      <span className="text-black group-hover/edit:text-white">
                         {item.title}
                       </span>
                     </Link>
